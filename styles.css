@@ -1,0 +1,586 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+
+/*-------------------------------------------------------------------------------*/
+/* REAL CODE STARTS BELOW */
+/*-------------------------------------------------------------------------------*/
+
+/* FONTS */
+
+@font-face {
+    font-family: 'Rubik-Light';
+    src:  url('fonts/Rubik-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik-LightItalic';
+    src:  url('fonts/Rubik-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik-Regular';
+    src:  url('fonts/Rubik-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik-Italic';
+    src:  url('fonts/Rubik-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik-Medium';
+    src:  url('fonts/Rubik-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik-MediumItalic';
+    src:  url('fonts/Rubik-MediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik-SemiBold';
+    src:  url('fonts/Rubik-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik-SemiBoldItalic';
+    src:  url('fonts/Rubik-SemiBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik-Bold';
+    src:  url('fonts/Rubik-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik-BoldItalic';
+    src:  url('fonts/Rubik-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik-ExtraBold';
+    src:  url('fonts/Rubik-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik-ExtraBoldItalic';
+    src:  url('fonts/Rubik-ExtraBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik-Black';
+    src:  url('fonts/Rubik-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik-BlackItalic';
+    src:  url('fonts/Rubik-BlackItalic.ttf') format('truetype');
+}
+
+/*Default styles*/
+html {
+    font-size: 16px; /* Sets 1rem = 16px */
+}
+
+body {
+    background-color: #EBEBEB;
+    font-family: 'Arial';
+}
+
+main {
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+header .top-nav-bar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 4rem;
+    background-color: #FFE4CE;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    z-index: 1000;
+}
+
+#logoamelia {
+    position: relative;
+    display: block;
+    z-index: 2000;
+}
+
+.dropdown-menu {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown-menu .btn-menu {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    z-index: 300;
+}
+
+.dropdown-menu #myDropDown {
+    display: none;
+    text-align: center;
+    background-color: rgba(53, 57, 60, 0.8);
+    position: fixed;
+    font-size: 1.5em;
+    margin-top: 0.8rem;
+    z-index: 300;
+    margin-left: -5%;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.dropdown-menu #myDropDown li a:hover, a:active, a:focus {
+    background-color: rgba(6, 73, 84, 0.8);
+}
+
+.dropdown-menu #myDropDown a {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+
+    float: none;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Rubik-Regular';
+    border-top: 4px solid rgba(141, 141, 141, 0.8);
+    padding: 0.5em 0;
+}
+
+#myDropDown.show {
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+h2 {
+    font-family : 'Rubik-Light';
+    font-size: 1rem;
+    text-align: center;
+    color: #064954;
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    width: 90%
+}
+
+h3 {
+    font-family: 'Rubik-Regular';
+    font-size: 1rem;
+    color: #064954;
+}
+
+h4 {
+    font-family: 'Rubik-Regular';
+    font-size: 0.8rem;
+    color: #03333b
+}
+
+h5 {
+    width: 100%;
+    text-align: left;
+    font-family : 'Rubik-Medium';
+    color: #064954;
+    font-size: 1.5rem;
+    padding-left: 2.5rem;
+    margin-top: 2rem;
+}
+
+p {
+    font-family: 'Rubik-Light';
+    color: #064954;
+    font-size: 1rem;
+    padding: 0 5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+figcaption {
+    font-family : 'Rubik-Light';
+    font-size: 0.7rem;
+    float: right;
+    margin: 0.5rem 2.5rem;
+    color: #03333b;
+}
+
+.imagesAccueil {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    z-index: -100;
+    padding-top: 40px;
+}
+
+#btn-VoirChambres {
+    background-color: #0089A1;
+    color: #FFF;
+    font-size: 1.2em;
+    border: 2px solid;
+    border-color: #064954;
+    border-radius: 12px;
+    width: 240px;
+    height: 50px;
+    margin-bottom: 2em;
+    outline: none;
+}
+
+#btn-VoirChambres:hover, #btn-VoirChambres:active, #btn-VoirChambres:focus {
+    background-color: #14BCDA;
+}
+
+#IMGchambre {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: auto;
+    position: relative;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+#IMGchambre.behind {
+    z-index: -100;
+}
+
+#caracteristiques li, #prix li {
+    font-family: 'Rubik-Light';
+    line-height: 2rem;
+    color: #03333b;
+}
+
+#emplacementGoogle {
+    width: 80%;
+    margin: auto;
+    height: 50vw;
+    margin-bottom: 2rem;
+}
+
+address {
+    font-style: normal;
+    font-family: 'Rubik-Regular';
+    color: #03333b;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.8rem;
+}
+
+form {
+    width: 90%;
+    max-width: 900px;
+    border: 2px solid rgba(0,0,0,0.3);
+    border-radius: 16px;
+    padding: 32px;
+    padding-bottom: 16px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+}
+
+label {
+    font-family: 'Rubik-Regular';
+    color: #03333b;
+    float: left;
+    font-size: 1rem;
+    text-align: left;
+    width: 25%;
+}
+
+input, textarea {
+    width: 75%;
+    margin-bottom: 1rem;
+    font-family: 'Rubik-Regular';
+    color: #03333b;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#btn-Submit {
+    background-color: #0089A1;
+    color: #FFF;
+    font-size: 1.2rem;
+    border: 2px solid;
+    border-color: #064954;
+    border-radius: 12px;
+    width: 120px;
+    height: 40px;
+    margin-top: 1rem;
+    outline: none;
+}
+
+#btn-Submit:hover, #btn-Submit:active, #btn-Submit:focus {
+    background-color: #14BCDA;
+}
+
+.contactInfo {
+    line-height: 3rem;
+    font-family: 'Rubik-Regular';
+    color: #03333b;
+    font-size: 1.5rem;
+}
+
+.rooms {
+    display: none;
+}
+
+.mySlides {
+    display: none;
+}
+img {vertical-align: middle;}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -32px;
+  margin-left: 0;
+  margin-right: 30%;
+  color: #95d9e5;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: -25vw;
+  border-radius: 3px 0 0 3px;
+}
+
+#leftArr {
+    left: 5vw;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+
+/*Display 6 to a row for large displays (like medium tablets and up) */
+@media screen and (min-width: 80rem){
+
+    #telephone-call {
+        display: none;
+    }
+
+    header .top-nav-bar {
+        height: 5rem;
+    }
+
+    .top-nav-bar #myDropDown {
+        display: flex;
+        margin-top: -0.6em;
+        background-color: transparent;
+    }
+
+    .dropdown-menu #myDropDown a {
+        border: 0;
+        padding: 0 20px;
+        font-size: 1.2rem;
+        text-transform: none;
+        color: #552906;
+    }
+
+    .dropdown-menu #myDropDown li a:hover, a:active, a:focus {
+        background-color: transparent;
+        color: #9c4b0b;
+    }
+
+    .dropdown-menu #myDropDown:nth-child(2) {
+        padding-left: 1.5em;
+    }
+
+    .btn-menu {
+        display: none;
+    }
+
+    .imagesAccueil {
+        width: 90%;
+        filter: drop-shadow(0 30px 30px #777);
+    }
+
+    #welcomeIMG1 {
+        margin-top: 2rem;
+        height: 40vw;
+    }
+
+    figcaption {
+        margin-top: 2rem;
+        margin-right: 5vw;
+        font-size: 1rem;
+    }
+
+    h2 {
+        margin-top: 8rem;
+        margin-bottom: 3rem;
+    }
+
+    h5 {
+        padding-left: 5rem;
+        font-size: 1.8rem;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    #IMGchambre {
+        height: 35vw;
+        position: relative;
+        width: 70%;
+        margin-bottom: 2em;
+    }
+
+    .next {
+        right: -19vw;
+        border-radius: 3px 0 0 3px;
+      }
+      
+      #leftArr {
+          left: 2vw;
+      }
+
+    #emplacementGoogle {
+        width: 70%;
+        height: 35vw;
+    }
+
+}
