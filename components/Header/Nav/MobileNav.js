@@ -28,15 +28,21 @@ const MobileNav = () => {
         size={6}
         _hover={{ bg: "none" }}
       />
-      <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
+      <Drawer isOpen={isOpen} placement="left" onClose={onClose} size="xs">
         <DrawerOverlay />
         <DrawerContent bg="#F9FFE9">
           <DrawerCloseButton />
 
-          <DrawerBody>
-              <UnorderedList listStyleType="none">
-                  <NavItems />
-              </UnorderedList>
+          <DrawerBody >
+            <UnorderedList
+              listStyleType="none"
+              fontFamily="Rambla, sans-serif"
+              fontSize="1.4rem"
+              color="#975321"
+              pt={6}
+            >
+              <NavItems vertical={1} />
+            </UnorderedList>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
