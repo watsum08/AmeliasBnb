@@ -10,13 +10,16 @@ const Header = (props) => {
   const isMobile = width < 768;
   return (
     <Flex
-      bg={props.bgColor}
+      bg={props.homePage ? "transparent" : "#F9FFE9" }
       px={{ base: 4, sm: 6, md: 10, lg: 16, xl: 24, "2xl": 32 }}
       py={4}
       transition="all 0.5s"
       w="full"
       align="center"
       justify="space-between"
+      position="absolute"
+      zIndex={100}
+      opacity={props.opacity}
     >
       {isMobile && <MobileNav />}
       <HomeLink />

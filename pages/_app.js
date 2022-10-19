@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider>
       <Box bg="#D3D9AE">
-        <Container maxW={1440} p={0}>
+        <Container maxW={1920} p={0}>
           <Component {...pageProps} />
         </Container>
       </Box>
