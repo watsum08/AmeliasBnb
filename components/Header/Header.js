@@ -3,7 +3,6 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 import HomeLink from "./HomeLink";
 import MobileNav from "./Nav/MobileNav";
 import WebNav from "./Nav/WebNav";
-import ReserveButton from "./ReserveButton";
 
 const Header = (props) => {
   const { width } = useWindowDimensions();
@@ -12,7 +11,7 @@ const Header = (props) => {
     <Flex
       bg={props.homePage ? "transparent" : "#F9FFE9" }
       px={{ base: 4, sm: 6, md: 10, lg: 16, xl: 24, "2xl": 32 }}
-      py={4}
+      py={{sm: 4, md: 6 }}
       transition="all 0.5s"
       w="full"
       align="center"
@@ -25,7 +24,6 @@ const Header = (props) => {
       <HomeLink />
       <Flex mt={{ base: 0, md: 4 }} w={isMobile ? "auto" : "full"} justify="space-between">
         {!isMobile && <WebNav />}
-        <ReserveButton />
       </Flex>
     </Flex>
   );

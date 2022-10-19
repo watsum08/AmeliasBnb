@@ -27,6 +27,7 @@ const MobileNav = () => {
         color="#AE5311"
         size={6}
         _hover={{ bg: "none" }}
+        pos="absolute"
       />
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay />
@@ -47,7 +48,6 @@ const MobileNav = () => {
         pr={6}
         gap={{ sm: 4, md: 6, lg: 8 }}
         my="auto"
-        fontFamily="Rambla, sans-serif"
         fontSize="1.5rem"
         color="#975321"
         transition="all 0.5s"

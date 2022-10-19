@@ -5,7 +5,7 @@ const NavItem = (props) => {
   return (
     <ListItem>
       <Link href={props.page}>
-        <Box _hover={{ opacity: 0.7, cursor: "pointer" }}>{props.name}</Box>
+        <Box transition="all 0.2s" _hover={{ cursor: "pointer", filter: "brightness(70%)" }} textTransform="uppercase">{props.name}</Box>
       </Link>
     </ListItem>
   );

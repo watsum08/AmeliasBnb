@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Rambla:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@300;400;700&display=swap');
 
 html,
 body {
   padding: 0;
   margin: 0;
   background-color: #d3d9ae;
+  font-family: "Bellota Text, sans-serif";
 }
 
 a {
@@ -19,7 +21,7 @@ a {
     transform: none;
   }
   to {
-    filter: blur(2px) brightness(65%);
+    filter: blur(3px) brightness(60%);
     transform: scale(1.05);
   }
 }

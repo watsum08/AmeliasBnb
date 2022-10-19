@@ -6,13 +6,13 @@ const WebNav = () => {
     <UnorderedList
       display="inline-flex"
       listStyleType="none"
-      pl={{ sm: 0, md: 2, lg: 4 }}
-      pr={6}
-      gap={{ sm: 4, md: 6, lg: 8 }}
+      w="full"
+      justifyContent="flex-end"
+      gap={{ sm: 4, md: 6, lg: 12 }}
       my="auto"
-      fontFamily="Rambla, sans-serif"
+      fontFamily="Bellota Text, sans-serif"
       fontSize="1.5rem"
-      color="#975321"
+      color="#FFDAA4"
       transition="all 0.5s"
     >
       <NavItems />

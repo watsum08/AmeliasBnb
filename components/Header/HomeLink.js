@@ -5,10 +5,12 @@ const HomeLink = () => {
   return (
     <Link href="/">
       <Image
-        src="/logoamelia.png"
+        src="static/logoamelia.png"
         alt="Amelia's Logo"
-        w={{ base: 36, sm: 44 }}
-        _hover={{ cursor: "pointer" }}
+        w={{ sm: 16, md: 20, lg: 24 }}
+        m="auto"
+        transition="all 0.2s"
+        _hover={{ cursor: "pointer", filter: "brightness(70%)" }}
       />
     </Link>
   );
