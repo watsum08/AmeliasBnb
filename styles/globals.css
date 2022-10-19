@@ -15,11 +15,20 @@ a {
 /* ANIMATIONS */
 @keyframes heroImage {
   from {
-    filter: none;
+    filter: blur(0px) brightness(90%);
     transform: none;
   }
   to {
     filter: blur(3px) brightness(60%);
     transform: scale(1.05);
+  }
+}
+
+@keyframes fullOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

@@ -11,7 +11,8 @@ export default function Home() {
           <Image
             src="static/images/heroimage.jpeg"
             alt="Hero Image"
-            animation="heroImage 2s ease-in-out forwards 1s"
+            animation= "heroImage 2s ease-in-out forwards 1s"
+            filter="brightness(90%)"
             pos="relative"
             draggable="false"
           />

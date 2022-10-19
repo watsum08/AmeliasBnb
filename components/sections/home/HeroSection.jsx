@@ -15,8 +15,9 @@ const HeroSection = () => {
       <Box
         w="fit-content"
         m="auto"
-        transition="0.5s all linear"
-        opacity={1}
+        transition="1s all linear"
+        animation= "fullOpacity 2s ease-in forwards 2s "
+        opacity={0}
         fontFamily="'Bellota Text', sans-serif"
       >
         <Box color="#EFE8DE" fontWeight={300}>
@@ -41,7 +42,7 @@ const HeroSection = () => {
         >
           Votre maison au coeur du Bouveret
         </Heading>
-        <Btn text="Découvrir" m="48px 0 0 0"/>
+        <Btn text="Découvrir" m="48px 0 0 0" />
       </Box>
     </Box>
   );
