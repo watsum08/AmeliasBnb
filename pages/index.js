@@ -19,9 +19,6 @@ export default function Home() {
          <HeroSection />
         </Box>
       </Box>
-      <Box bg="#F9FFE9" px={{ sm: 6, md: 10, lg: 16, xl: 24, "2xl": 32 }}>
-        Test oksasassssdsfsfaaasasas
-      </Box>
     </>
   );
 }
