@@ -16,7 +16,7 @@ const HeroSection = () => {
         w="fit-content"
         m="auto"
         transition="1s all linear"
-        animation= "fullOpacity 2s ease-in forwards 2s "
+        animation= "fullOpacity 1.5s ease-in forwards 0.5s "
         opacity={0}
         fontFamily="'Bellota Text', sans-serif"
       >
