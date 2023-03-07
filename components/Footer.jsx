@@ -1,6 +1,6 @@
 import { Flex, List, Text } from "@chakra-ui/react";
-import NavItem from "./Header/Nav/NavItem";
-import NavItems from "./Header/Nav/NavItems";
+import NavItem from "./header/nav/NavItem";
+import NavItems from "./header/nav/NavItems";
 import Section from "./UI/Section";
 
 const Footer = () => {

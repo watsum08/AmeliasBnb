@@ -1,8 +1,8 @@
 import { Flex } from "@chakra-ui/react";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import HomeLink from "./HomeLink";
-import MobileNav from "./Nav/MobileNav";
-import WebNav from "./Nav/WebNav";
+import MobileNav from "./nav/MobileNav";
+import WebNav from "./nav/WebNav";
 
 const Header = (props) => {
   const { width } = useWindowDimensions();

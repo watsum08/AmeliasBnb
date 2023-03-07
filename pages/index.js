@@ -1,5 +1,5 @@
 import { Box, Image } from "@chakra-ui/react";
-import Header from "../components/Header/Header";
+import Header from "../components/header/Header";
 import CardsSection from "../components/sections/home/CardsSection";
 import BouveretSection from "../components/sections/home/BouveretSection";
 import HeroSection from "../components/sections/home/HeroSection";
