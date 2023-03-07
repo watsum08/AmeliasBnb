@@ -1,6 +1,9 @@
-import { Box, Button, Image } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import Header from "../components/Header/Header";
+import CardsSection from "../components/sections/home/CardsSection";
+import BouveretSection from "../components/sections/home/BouveretSection";
 import HeroSection from "../components/sections/home/HeroSection";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -17,8 +20,14 @@ export default function Home() {
             draggable="false"
           />
          <HeroSection />
+
+         <BouveretSection />
+         
+         <CardsSection />
         </Box>
       </Box>
+      
+      <Footer />
     </>
   );
 }

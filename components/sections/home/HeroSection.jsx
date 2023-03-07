@@ -1,5 +1,5 @@
-import { Box, Heading } from "@chakra-ui/react";
-import Btn from "../../UI/Btn";
+import { Box, Heading, Link } from "@chakra-ui/react";
+import LinkBtn from "../../UI/LinkBtn";
 
 const HeroSection = () => {
   return (
@@ -9,8 +9,10 @@ const HeroSection = () => {
       fontSize={32}
       color="#fff"
       zIndex={100}
-      pos="absolute"
-      top="32%"
+      pos="relative"
+      mt="-100vh"
+      top="30vh"
+      h="100vh"
     >
       <Box
         w="fit-content"
@@ -42,7 +44,7 @@ const HeroSection = () => {
         >
           Votre maison au coeur du Bouveret
         </Heading>
-        <Btn text="Découvrir" m="48px 0 0 0" />
+        <LinkBtn m="48px auto 0 auto" href="#bouveret">Découvrir</LinkBtn>
       </Box>
     </Box>
   );
