@@ -3,19 +3,29 @@ import Header from "../components/header/Header";
 import Footer from "../components/Footer";
 import PageHeading from "../components/UI/PageHeading";
 import RoomSection from "../components/sections/chambres/RoomSection";
+import Head from "next/head";
 
 export default function Chambres() {
   return (
     <>
-      <Header opacity={1} />
+      <Head>
+        <title>Amelia&apos;s BnB - Chambres</title>
+        <meta property="og:title" content="Amelia's BnB - Chambres" key="title" />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
 
-      <PageHeading text="Chambres" />
+      <main>
+        <Header opacity={1} />
 
-      <Box>
-        <RoomSection />
-      </Box>
-      
-      <Footer />
+        <PageHeading text="Chambres" />
+
+        <Box>
+          <RoomSection />
+        </Box>
+
+        <Footer />
+      </main>
     </>
   );
 }
