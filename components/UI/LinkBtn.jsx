@@ -6,11 +6,11 @@ const LinkBtn = (props) => {
     <ChakraLink as={Link} href={props.href} scroll={false}>
       <Text
         w="fit-content"
-        m={props.m ?? 0}
+        m={props.m ?? "auto"}
         borderRadius="4px"
         textTransform="uppercase"
         fontFamily="'Baloo Tamma 2', sans-serif"
-        py={4}
+        py={2}
         px={6}
         _hover={{ bgColor: "#28C7D0", cursor: 'pointer' }}
         _active={{ bgColor: "#28C7D0" }}

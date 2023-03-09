@@ -5,7 +5,7 @@ const PageHeading = (props) => {
     <Heading
       as="h1"
       mt={48}
-      mb={16}
+      mb={8}
       textAlign="center"
       textTransform="uppercase"
       fontWeight={400}

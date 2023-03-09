@@ -7,6 +7,7 @@ import {
   Link,
   Text,
 } from "@chakra-ui/react";
+import LinkBtn from "./UI/LinkBtn";
 
 const LinkCard = (props) => {
   return (
@@ -25,26 +26,13 @@ const LinkCard = (props) => {
         fontSize="32px"
         fontWeight={600}
         textTransform="uppercase"
-        my={6}
+        my={8}
       >
         {props.name}
       </Heading>
       <Box>{props.description}</Box>
       <Flex pos="absolute" w="full" ml={-12} justify="center" bottom={12}>
-        <Link
-          py={3}
-          px={5}
-          href={props.linkHref}
-          textTransform="uppercase"
-          rounded="4px"
-          bg="#1C989F"
-          border="1px solid #045155"
-          color="white"
-          fontWeight={400}
-          fontSize="24px"
-        >
-          {props.linkText}
-        </Link>
+        <LinkBtn href={props.linkHref}>{props.linkText}</LinkBtn>
       </Flex>
     </Box>
   );

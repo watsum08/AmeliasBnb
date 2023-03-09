@@ -1,9 +1,12 @@
 import "../styles/globals.css";
+import "../styles/scrollbar.css";
 import { ChakraProvider, Container, Box } from "@chakra-ui/react";
+
+import theme from "../styles/Theme";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Box bg="#EEDABB">
         <Container maxW={1920} p={0}>
           <Component {...pageProps} />

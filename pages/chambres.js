@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import PageHeading from "../components/UI/PageHeading";
 import RoomSection from "../components/sections/chambres/RoomSection";
 import Head from "next/head";
+import OtherSection from "../components/sections/chambres/OtherSection";
 
 export default function Chambres() {
   return (
@@ -22,6 +23,8 @@ export default function Chambres() {
 
         <Box>
           <RoomSection />
+
+          <OtherSection />
         </Box>
 
         <Footer />

@@ -1,4 +1,4 @@
-import { Box, Flex, Image, List, ListItem, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Link, List, ListItem, Text } from "@chakra-ui/react";
 import Section from "../../UI/Section";
 import LinkCard from "../../LinkCard";
 
@@ -18,7 +18,7 @@ const CardsSection = () => {
                     alt="Télévision inclus"
                     w="24px"
                   />
-                  <Text fontWeight={500}>Télévision</Text>
+                  <Text fontWeight={400}>Télévision</Text>
                 </Flex>
               </ListItem>
               <ListItem mt={3}>
@@ -28,7 +28,7 @@ const CardsSection = () => {
                     alt="Réfrigérateur inclus"
                     w="24px"
                   />
-                  <Text fontWeight={500}>Réfrigérateur</Text>
+                  <Text fontWeight={400}>Réfrigérateur</Text>
                 </Flex>
               </ListItem>
               <ListItem mt={3}>
@@ -38,7 +38,7 @@ const CardsSection = () => {
                     alt="Connexion Wi-Fi gratuit"
                     w="24px"
                   />
-                  <Text fontWeight={500}>Télévision</Text>
+                  <Text fontWeight={400}>Télévision</Text>
                 </Flex>
               </ListItem>
               <ListItem mt={3}>
@@ -48,7 +48,7 @@ const CardsSection = () => {
                     alt="Salle de bains privée"
                     w="24px"
                   />
-                  <Text fontWeight={500}>Salle de bains privée</Text>
+                  <Text fontWeight={400}>Salle de bains privée</Text>
                 </Flex>
               </ListItem>
             </List>
@@ -69,7 +69,7 @@ const CardsSection = () => {
                     alt="8 minutes à pied de la gare"
                     w="24px"
                   />
-                  <Text fontWeight={500}>8 minutes à pied de la gare</Text>
+                  <Text fontWeight={400}>8 minutes à pied de la gare</Text>
                 </Flex>
               </ListItem>
               <ListItem mt={3}>
@@ -79,7 +79,7 @@ const CardsSection = () => {
                     alt="15 minutes en voiture à Montreux"
                     w="24px"
                   />
-                  <Text fontWeight={500}>15 minutes en voiture à Montreux</Text>
+                  <Text fontWeight={400}>15 minutes en voiture à Montreux</Text>
                 </Flex>
               </ListItem>
               <ListItem mt={3}>
@@ -89,7 +89,7 @@ const CardsSection = () => {
                     alt="Place de parking privée incluse"
                     w="24px"
                   />
-                  <Text fontWeight={500}>Place de parking privée incluse</Text>
+                  <Text fontWeight={400}>Place de parking privée incluse</Text>
                 </Flex>
               </ListItem>
               <ListItem mt={3}>
@@ -99,7 +99,7 @@ const CardsSection = () => {
                     alt="Emplacement"
                     w="24px"
                   />
-                  <Text fontWeight={500}>Route des Îles 4, 1897 Bouveret</Text>
+                  <Text fontWeight={400}>Route des Îles 4, 1897 Bouveret</Text>
                 </Flex>
               </ListItem>
             </List>
@@ -112,12 +112,20 @@ const CardsSection = () => {
           imgSrc="/static/icons/contact_icon.png"
           name="Contact"
           description={
-            <Text as="p" textAlign="justify" fontWeight={500}>
+            <Text as="p" textAlign="justify" fontWeight={400}>
               Envoyez nous un mail ou appelez nous directement pour toutes
               questions et réservations.
               <br />
               <br />
-              Vous pouvez également réserver nos chambres sur booking.com
+              Vous pouvez également réserver nos chambres sur{" "}
+              <Link
+                color="blue"
+                fontWeight={500}
+                href="https://booking.com/"
+                isExternal
+              >
+                Booking.com
+              </Link>
             </Text>
           }
           linkText="Contactez-nous"

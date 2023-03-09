@@ -9,7 +9,7 @@ const Footer = () => {
       <Section m="0 auto">
         <Flex borderTop="1px solid #5A3D0C" justify="space-between" align="center">
           <List py={8} px={10} fontSize="20px">
-            <Flex gap={8}>
+            <Flex gap={8} flexDir={{ base: "column", lg: "row"}}>
               <NavItem page="/" name="Accueil" />
               <NavItems />
             </Flex>

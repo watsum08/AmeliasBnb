@@ -21,12 +21,14 @@ const MobileNav = () => {
       <Button
         as={IconButton}
         aria-label="Menu"
-        icon={<HamburgerIcon boxSize={6} />}
+        icon={<HamburgerIcon boxSize={8} />}
         onClick={onOpen}
         bg="none"
-        color="#AE5311"
-        size={6}
+        color="#FFDAA4"
+        size={8}
+        p={2}
         _hover={{ bg: "none" }}
+        _active={{}}
         pos="absolute"
       />
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>

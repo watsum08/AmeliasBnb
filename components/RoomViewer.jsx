@@ -5,108 +5,176 @@ import {
   Image,
   List,
   ListItem,
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalOverlay,
   Text,
+  useDisclosure,
 } from "@chakra-ui/react";
+import { useState } from "react";
 import LinkBtn from "./UI/LinkBtn";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { BsZoomIn } from "react-icons/bs";
 
 const RoomViewer = (props) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <Flex
-      w="fit-content"
+      w="auto"
       h="auto"
       bg="#FAEAD2"
-      gap={4}
       align="center"
+      p={{ base: 2, sm: 3, md: 4, lg: 5, xl: 4 }}
       mx="auto"
-      p={8}
+      filter="drop-shadow(0px 4px 6px #888)"
+      flexDir={{ base: "column", "2xl": "row" }}
     >
-      <Button
-        bg="none"
-        w="fit-content"
-        h="auto"
-        px={4}
-        py={16}
-        mr={4}
-        opacity={1}
-        _hover={{ opacity: 0.7 }}
-        _active={{}}
-      >
-        <FaChevronLeft size="48px" color="#0E7980" />
-      </Button>
+      <Flex gap={{ base: 1, sm: 2, md: 4 }} flexDir={{ base: "column-reverse", xl: "row" }}>
+        <Flex gap={{ base: 1, sm: 2, md: 4 }} flexDir={{ base: "row", xl: "column" }} justify="center">
+          <Button
+            m={0}
+            p={0}
+            w={{ base: "48px", sm: "128px", md: "132px" }}
+            h="auto"
+            onClick={() => setActiveIndex(0)}
+            rounded="none"
+          >
+            <Image
+            w={{ base: "48px", sm: "128px", md: "132px" }}
+            h={{ base: "48px", sm: "128px", md: "132px" }}
+              src={props.img[0]}
+              alt={props.roomName}
+              _hover={{
+                outline: "1px solid #452D12",
+                filter: "brightness(0.5)",
+              }}
+              transition="0.2s all"
+            />
+          </Button>
 
-      <Flex gap="16px" flexDir="column">
-        <Button
-          m={0}
-          p={0}
-          w="140px"
-          h="auto"
-          onClick={() => alert("change image to otherImg[0]")}
-        >
-          <Image
-            src={props.otherImg[0]}
-            w="140px"
-            h="140px"
-            alt={props.roomName}
-          />
-        </Button>
+          <Button
+            m={0}
+            p={0}
+            w={{  base: "48px", sm: "128px", md: "132px" }}
+            h="auto"
+            onClick={() => setActiveIndex(1)}
+          >
+            <Image
+              src={props.img[1]}
+              w={{ base: "48px", sm: "128px", md: "132px" }}
+              h={{ base: "48px", sm: "128px", md: "132px" }}
+              alt={props.roomName}
+              _hover={{
+                outline: "1px solid #452D12",
+                filter: "brightness(0.5)",
+              }}
+              transition="0.2s all"
+            />
+          </Button>
 
-        <Button
-          m={0}
-          p={0}
-          w="140px"
-          h="auto"
-          onClick={() => alert("change image to otherImg[1]")}
-        >
-          <Image
-            src={props.otherImg[1]}
-            w="140px"
-            h="140px"
-            alt={props.roomName}
-          />
-        </Button>
+          <Button
+            m={0}
+            p={0}
+            w={{  base: "48px", sm: "128px", md: "132px" }}
+            h="auto"
+            onClick={() => setActiveIndex(2)}
+          >
+            <Image
+              src={props.img[2]}
+              w={{ base: "48px", sm: "128px", md: "132px" }}
+              h={{ base: "48px", sm: "128px", md: "132px" }}
+              alt={props.roomName}
+              _hover={{
+                outline: "1px solid #452D12",
+                filter: "brightness(0.5)",
+              }}
+              transition="0.2s all"
+            />
+          </Button>
+        </Flex>
 
-        <Button
-          m={0}
-          p={0}
-          w="140px"
-          h="auto"
-          onClick={() => alert("change image to otherImg[2]")}
+        <Modal
+          isOpen={isOpen}
+          onClose={onClose}
+          isCentered
+          blockScrollOnMount={false}
         >
-          <Image
-            src={props.otherImg[2]}
-            w="140px"
-            h="140px"
-            alt={props.roomName}
-          />
-        </Button>
+          <ModalOverlay />
+          <ModalContent minW="70%" bg="none">
+            <Text
+              color="white"
+              textAlign="left"
+              pl={4}
+              fontSize="32px"
+              lineHeight="180%"
+              fontWeight={600}
+            >
+              {props.roomName}
+            </Text>
+            <ModalBody p={1} bg="none">
+              <Image
+                src={props.img[activeIndex]}
+                w="full"
+                h="auto"
+                alt={props.roomName}
+                filter="drop-shadow(0px 4px 6px black)"
+              />
+            </ModalBody>
+          </ModalContent>
+        </Modal>
+        <Box
+          bgImage={props.img[activeIndex]}
+          w={{ base: "full", sm: "360px", md: "420px", lg: "540px", xl: "640px" }}
+          h={{ base: "240px", sm: "240px", md: "280px", lg: "360px", xl: "auto" }}
+          bgRepeat="no-repeat"
+          bgSize="cover"
+          alt={props.roomName}
+          onClick={onOpen}
+          cursor="pointer"
+          _hover={{
+            outline: "1px solid #452D12",
+            filter: "brightness(0.5)",
+          }}
+          transition="0.2s all"
+          pos="relative"
+          mx="auto"
+        >
+          <Flex
+            align="center"
+            justify="center"
+            h="full"
+            opacity={0}
+            _hover={{ opacity: 1, filter: "brightness(1)" }}
+            transition="0.2s all"
+          >
+            <BsZoomIn
+              size="48px"
+              zIndex={111}
+              color="white"
+            />
+          </Flex>
+        </Box>
       </Flex>
-
-      <Image
-        src={props.activeImgSrc}
-        w="640px"
-        h="452px"
-        alt={props.roomName}
-      />
 
       <Flex
         flexDir="column"
-        justify="space-between"
-        h="452px"
+        justify={{ base: "center", "2xl": "space-between" }}
+        h={{ base: "auto", "2xl": "full" }}
         textAlign="center"
-        w="auto"
-        m="auto"
-        minW="320px"
-        py={4}
-        border="1px solid #777"
+        w={{ base: "full", "2xl": "auto" }}
+        minW={{ base: 0, "2xl": "320px" }}
+        gap={{ base: 4, lg: 6, "2xl": 0 }}
+        mt={4}
+        py={{ base: 0, sm: 1, md: 2, "2xl": 4 }}
       >
-        <Text fontSize="28px">Chambre 1</Text>
-        <List display="flex" flexDir="column" lineHeight="40px" fontSize="20px">
-          <ListItem>Lit double</ListItem>
-          <ListItem>Lit double</ListItem>
-          <ListItem>Lit double</ListItem>
-          <ListItem>Lit double</ListItem>
-          <ListItem>Lit double</ListItem>
+        <Text fontSize="28px">{props.roomName}</Text>
+        <List display="flex" flexDir="column" lineHeight="36px" fontSize="20px">
+          {props.description.map((data, index) => (
+            <ListItem key={index}>{data}</ListItem>
+          ))}
         </List>
 
         <Box>
@@ -116,20 +184,6 @@ const RoomViewer = (props) => {
           <Text mt={2}>Vérifiez la disponibilité</Text>
         </Box>
       </Flex>
-
-      <Button
-        bg="none"
-        w="fit-content"
-        h="auto"
-        px={4}
-        py={16}
-        ml={4}
-        opacity={1}
-        _hover={{ opacity: 0.7 }}
-        _active={{}}
-      >
-        <FaChevronRight size="48px" color="#0E7980" />
-      </Button>
     </Flex>
   );
 };
