@@ -3,6 +3,7 @@ import Header from "../components/header/Header";
 import Footer from "../components/Footer";
 import PageHeading from "../components/UI/PageHeading";
 import Head from "next/head";
+import MapsSection from "../components/sections/emplacement/MapsSection";
 
 export default function Chambres() {
   return (
@@ -20,6 +21,7 @@ export default function Chambres() {
         <PageHeading text="Emplacement" />
 
         <Box>
+          <MapsSection />
         </Box>
 
         <Footer />
