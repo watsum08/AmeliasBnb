@@ -5,12 +5,12 @@ const TextImageFlex = (props) => {
     <Flex
       justify="space-around"
       align="center"
-      my={36}
-      bg={{ base: "red", "2xl": "green" }}
-      flexDir={{ base: "column", lg: "row" }}
+      my={{ base: 8, sm:12, md: 16, xl: 32 }}
+      flexDir={{ base: "column-reverse", xl: "row" }}
+      gap={8}
     >
-      <Box w="40%">{props.leftSide}</Box>
-      <Box w="40%">{props.rightSide}</Box>
+      <Box w={{ base: "fit-content", xl: "45%" }} maxW="75%">{props.leftSide}</Box>
+      <Box w={{ base: "fit-content", xl: "45%" }} maxW="75%">{props.rightSide}</Box>
     </Flex>
   );
 };

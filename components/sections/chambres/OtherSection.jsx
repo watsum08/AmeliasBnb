@@ -1,14 +1,15 @@
 import { Image } from "@chakra-ui/image";
-import { Box, Flex, Text } from "@chakra-ui/layout";
+import { Box, Flex, Link, Text } from "@chakra-ui/layout";
 import Section from "../../UI/Section";
 import TextImageFlex from "../../UI/TextImageFlex";
+import ParagraphHeading from "../../UI/ParagraphHeading";
 
 const OtherSection = () => {
   return (
     <Section>
       <TextImageFlex
         leftSide={
-          <Text>
+          <Text textAlign={{ base: "center", xl: "justify" }}>
             Accès à la piscine privée ainsi qu&apos;à la cuisine commune inclus
             avec la location d&apos;une chambre.
             <br />
@@ -27,10 +28,19 @@ const OtherSection = () => {
         }
         rightSide={
           <Box>
-            <Text textTransform="uppercase" mb={4}>
+            <Text textTransform="uppercase" mb={4} fontWeight={500}>
               Équipements de chambre
             </Text>
-            <Flex bg="orange" px={9} py={6} gap={8} fontSize="18px">
+            <Flex
+              bg="#FAEAD2"
+              border="1px solid #5A3D0C"
+              px={9}
+              py={6}
+              gap={10}
+              fontSize="18px"
+              w="fit-content"
+              whiteSpace="nowrap"
+            >
               <Flex flexDir="column" gap={4}>
                 <Flex gap={2} align="center" w="full">
                   <Image
@@ -156,6 +166,36 @@ const OtherSection = () => {
               </Flex>
             </Flex>
           </Box>
+        }
+      />
+
+      <TextImageFlex
+        leftSide={
+          <Image src="/static/images/chambre1.jpg" alt="Cuisine commune" />
+        }
+        rightSide={
+          <>
+            <ParagraphHeading text="Cuisine commune" />
+            <Text
+              as="p"
+              textAlign={{ base: "center", xl: "justify" }}
+            >
+              Nous sommes heureux de vous fournir tous les équipements de
+              cuisine nécessaires pour que vous puissiez préparer vos plats
+              préférés en toute simplicité.
+              <br />
+              <br />
+              Pas envie de cuisiner ? Trouvez les restaurants près de chez nous{" "}
+              <Link
+                href="https://www.google.com/maps/search/Restaurants+near+route+des+%C3%AEles+4,+port+valais/@46.3843215,6.8547093,17z"
+                isExternal
+                color="blue"
+              >
+                ici
+              </Link>
+              .
+            </Text>
+          </>
         }
       />
     </Section>

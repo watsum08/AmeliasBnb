@@ -8,7 +8,7 @@ const BouveretSection = () => {
       <Flex justify="space-around" align="center" my={36}>
         <Box w="40%">
           <ParagraphHeading text="Le Bouveret" />
-          <Text as="p">
+          <Text as="p" textAlign={{ base: "center", xl: "justify" }}>
             Situé dans le canton du Valais au bord du Léman, ce village propose
             de nombreuses activités et d&apos;événements pour les personnes de
             toutes âges.
@@ -43,7 +43,7 @@ const BouveretSection = () => {
         </Box>
         <Box w="40%">
           <ParagraphHeading text="Envie de se rafraîchir ?" />
-          <Text as="p">
+          <Text as="p" textAlign={{ base: "center", xl: "justify" }}>
             Lors de votre séjour, si les conditions météorologiques le permet,
             profitez d&apos;un accès gratuit à notre piscine privée. <br />
             <br />
@@ -59,7 +59,7 @@ const BouveretSection = () => {
       <Flex justify="space-around" align="center" my={36}>
         <Box w="40%">
           <ParagraphHeading text="Petit-déjeuner" />
-          <Text as="p">
+          <Text as="p" textAlign={{ base: "center", xl: "justify" }}>
             Commencez votre journée par un repas frais et varié avec du café, du
             thé ou du jus de fruits selon vos désirs.
             <br />

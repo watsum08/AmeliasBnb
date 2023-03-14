@@ -20,18 +20,27 @@ const HeroSection = () => {
       images: [
         "/static/images/chambre1.jpg",
         "/static/images/chambre1.jpg",
-        "/static/images/heroimage.jpeg",
+        "/static/images/chambre1.jpg",
       ],
-      description: ["Lit double2", "Lit simple2", "Lit double2", "Lit simple2"],
+      description: ["Lit double", "Lit simple", "Lit double", "Lit simple"],
     },
     {
       name: "Chambre 3",
       images: [
-        "/static/images/pool_image.jpg",
-        "/static/images/lake_image.jpg",
-        "/static/images/breakfast_image.jpg",
+        "/static/images/chambre1.jpg",
+        "/static/images/chambre1.jpg",
+        "/static/images/chambre1.jpg",
       ],
-      description: ["Lit double3", "Lit simple3", "Lit double3", "Lit simple3"],
+      description: ["Lit double", "Lit simple", "Lit double", "Lit simple"],
+    },
+    {
+      name: "Chambre 4",
+      images: [
+        "/static/images/chambre1.jpg",
+        "/static/images/chambre1.jpg",
+        "/static/images/chambre1.jpg",
+      ],
+      description: ["Lit double", "Lit simple", "Lit double", "Lit simple"],
     },
   ];
   const [roomDisplayed, setRoomDisplayed] = useState(0);

@@ -111,6 +111,7 @@ const RoomViewer = (props) => {
               fontSize="32px"
               lineHeight="180%"
               fontWeight={600}
+              textShadow="0 0 8px black"
             >
               {props.roomName}
             </Text>
@@ -131,6 +132,7 @@ const RoomViewer = (props) => {
           h={{ base: "240px", sm: "240px", md: "280px", lg: "360px", xl: "auto" }}
           bgRepeat="no-repeat"
           bgSize="cover"
+          bgPos="center"
           alt={props.roomName}
           onClick={onOpen}
           cursor="pointer"

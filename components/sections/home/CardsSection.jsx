@@ -121,7 +121,7 @@ const CardsSection = () => {
               <Link
                 color="blue"
                 fontWeight={500}
-                href="https://booking.com/"
+                href="https://www.booking.com/Share-3syQHC"
                 isExternal
               >
                 Booking.com
