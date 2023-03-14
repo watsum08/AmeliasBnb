@@ -92,7 +92,7 @@ const OtherSection = () => {
 
                 <Flex gap={2.5} align="center" w="full">
                   <Image
-                    src="/static/icons/wifi_icon.svg"
+                    src="/static/icons/coffee_icon.svg"
                     alt="Machine à café"
                     w="22px"
                     h="22px"
@@ -118,7 +118,7 @@ const OtherSection = () => {
 
                 <Flex gap={2.5} align="center" w="full">
                   <Image
-                    src="/static/icons/television_icon.svg"
+                    src="/static/icons/swimming_icon.svg"
                     alt="Accès piscine"
                     w="22px"
                     h="22px"
@@ -130,7 +130,7 @@ const OtherSection = () => {
 
                 <Flex gap={2.5} align="center" w="full">
                   <Image
-                    src="/static/icons/television_icon.svg"
+                    src="/static/icons/smoke_icon.svg"
                     alt="Non-fumeur"
                     w="22px"
                     h="22px"
@@ -142,7 +142,7 @@ const OtherSection = () => {
 
                 <Flex gap={2.5} align="center" w="full">
                   <Image
-                    src="/static/icons/television_icon.svg"
+                    src="/static/icons/animal_icon.svg"
                     alt="Animaux bienvenues"
                     w="22px"
                     h="22px"
