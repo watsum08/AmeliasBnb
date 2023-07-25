@@ -171,15 +171,17 @@ const OtherSection = () => {
 
       <TextImageFlex
         leftSide={
-          <Image src="/static/images/chambre1.jpg" alt="Cuisine commune" />
+          <Image
+            src="/static/images/chambre1.jpg"
+            alt="Cuisine commune"
+            border="2px solid gray"
+            m="auto"
+          />
         }
         rightSide={
           <>
             <ParagraphHeading text="Cuisine commune" />
-            <Text
-              as="p"
-              textAlign={{ base: "center", xl: "justify" }}
-            >
+            <Text as="p" textAlign={{ base: "center", xl: "justify" }}>
               Nous sommes heureux de vous fournir tous les équipements de
               cuisine nécessaires pour que vous puissiez préparer vos plats
               préférés en toute simplicité.

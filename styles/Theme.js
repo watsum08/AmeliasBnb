@@ -11,6 +11,17 @@ const breakpoints = {
 };
 
 // 3. Extend the theme
-const theme = extendTheme({ breakpoints });
+const theme = extendTheme({
+  breakpoints,
+  styles: {
+    global: {
+      // styles for the `body`
+      body: {
+        bg: "#EEDABB", // Use any color from the palette
+        color: "black",
+      },
+    },
+  },
+});
 
 export default theme;

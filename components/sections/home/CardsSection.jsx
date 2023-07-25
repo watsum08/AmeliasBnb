@@ -1,14 +1,14 @@
-import { Box, Flex, Image, Link, List, ListItem, Text } from "@chakra-ui/react";
+import { Flex, Image, List, ListItem, Text } from "@chakra-ui/react";
 import Section from "../../UI/Section";
 import LinkCard from "../../LinkCard";
 
 const CardsSection = () => {
   return (
-    <Section m="256px auto 160px auto">
-      <Flex justify="space-evenly">
+    <Section m="128px auto 64px">
+      <Flex justify="space-evenly" flexWrap="wrap" gap={16}>
         <LinkCard
           imgSrc="/static/icons/bed_icon.png"
-          name="Nos chambres"
+          name="Chambres"
           description={
             <List w="fit-content" mx="auto">
               <ListItem>
@@ -53,37 +53,37 @@ const CardsSection = () => {
               </ListItem>
             </List>
           }
-          linkText="Voir chambres"
+          linkText="Chambres"
           linkHref="/chambres"
         />
 
         <LinkCard
           imgSrc="/static/icons/emplacement_icon.png"
-          name="Notre emplacement"
+          name="Emplacement"
           description={
             <List w="fit-content" mx="auto">
               <ListItem>
-                <Flex align="center" gap={4}>
+                <Flex align="center" gap={{ base: 2, md: 4}}>
                   <Image
                     src="/static/icons/train_icon.svg"
                     alt="8 minutes à pied de la gare"
                     w="24px"
                   />
-                  <Text fontWeight={400}>8 minutes à pied de la gare</Text>
+                  <Text fontWeight={400}>8 min. à pied de la gare</Text>
                 </Flex>
               </ListItem>
               <ListItem mt={3}>
-                <Flex align="center" gap={4}>
+                <Flex align="center" gap={{ base: 2, md: 4}}>
                   <Image
                     src="/static/icons/car_icon.svg"
                     alt="15 minutes en voiture à Montreux"
                     w="24px"
                   />
-                  <Text fontWeight={400}>15 minutes en voiture à Montreux</Text>
+                  <Text fontWeight={400}>15 min. en voiture à Montreux</Text>
                 </Flex>
               </ListItem>
               <ListItem mt={3}>
-                <Flex align="center" gap={4}>
+                <Flex align="center" gap={{ base: 2, md: 4}}>
                   <Image
                     src="/static/icons/parking_icon.svg"
                     alt="Place de parking privée incluse"
@@ -93,7 +93,7 @@ const CardsSection = () => {
                 </Flex>
               </ListItem>
               <ListItem mt={3}>
-                <Flex align="center" gap={4}>
+                <Flex align="center" gap={{ base: 2, md: 4}}>
                   <Image
                     src="/static/icons/position_icon.svg"
                     alt="Emplacement"
@@ -104,32 +104,23 @@ const CardsSection = () => {
               </ListItem>
             </List>
           }
-          linkText="Voir emplacement"
+          linkText="Emplacement"
           linkHref="/emplacement"
         />
 
         <LinkCard
           imgSrc="/static/icons/contact_icon.png"
-          name="Contact"
+          name="Reservation"
           description={
             <Text as="p" textAlign="justify" fontWeight={400}>
               Envoyez nous un mail ou appelez nous directement pour toutes
               questions et réservations.
               <br />
               <br />
-              Vous pouvez également réserver nos chambres sur{" "}
-              <Link
-                color="blue"
-                fontWeight={500}
-                href="https://www.booking.com/Share-3syQHC"
-                isExternal
-              >
-                Booking.com
-              </Link>
             </Text>
           }
-          linkText="Contactez-nous"
-          linkHref="/contact"
+          linkText="Reservation"
+          linkHref="/reservation"
         />
       </Flex>
     </Section>

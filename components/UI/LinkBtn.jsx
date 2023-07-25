@@ -12,13 +12,13 @@ const LinkBtn = (props) => {
         fontFamily="'Baloo Tamma 2', sans-serif"
         py={2}
         px={6}
-        _hover={{ bgColor: "#28C7D0", cursor: 'pointer' }}
+        _hover={{ bgColor: "#28C7D0", cursor: "pointer" }}
         _active={{ bgColor: "#28C7D0" }}
         bg="#1C989F"
         border="1px solid #045155"
         color="white"
         fontWeight={400}
-        fontSize="24px"
+        fontSize={{ base: "20px", xl: "24px" }}
       >
         {props.children}
       </Text>

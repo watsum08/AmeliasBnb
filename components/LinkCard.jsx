@@ -1,37 +1,35 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Image,
-  Link,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Image } from "@chakra-ui/react";
 import LinkBtn from "./UI/LinkBtn";
 
 const LinkCard = (props) => {
   return (
     <Box
       bg="#FAEAD2"
-      w="30%"
-      p={12}
+      w="420px"
+      p={{ base: 4, md: 8, xl: 12 }}
       filter="drop-shadow(0px 4px 6px #888)"
       textAlign="center"
       pos="relative"
-      h="600px"
+      h={{ base: "500px", md: "600px" }}
     >
-      <Image src={props.imgSrc} alt={props.name} mx="auto" h="160px" />
+      <Image
+        src={props.imgSrc}
+        alt={props.name}
+        mx="auto"
+        w="auto"
+        h={{ base: "120px", md: "160px" }}
+      />
       <Heading
         as="h3"
-        fontSize="32px"
+        fontSize={{ base: "24px", md: "32px" }}
         fontWeight={600}
         textTransform="uppercase"
         my={8}
       >
         {props.name}
       </Heading>
-      <Box>{props.description}</Box>
-      <Flex pos="absolute" w="full" ml={-12} justify="center" bottom={12}>
+      <Box fontSize={{ base: "16px", md: "18px" }}>{props.description}</Box>
+      <Flex pos="absolute" w="full" justify="center" bottom={12} left={0}>
         <LinkBtn href={props.linkHref}>{props.linkText}</LinkBtn>
       </Flex>
     </Box>

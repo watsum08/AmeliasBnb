@@ -6,7 +6,7 @@ const Section = (props) => {
       maxW="1600px"
       m={props.m ?? "48px auto"}
       mx={props.mx ?? "auto"}
-      px={{ base: 2, sm: 4, md: 6, lg: 8, xl: 12, "2xl": 16 }}
+      px={{ base: 2, lg: 8, xl: 12, "2xl": 16 }}
       id={props.id}
     >
       {props.children}

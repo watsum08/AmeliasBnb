@@ -21,14 +21,6 @@ export default function Home() {
       <main>
         <Box>
           <Box overflow="hidden" pos="relative">
-            <Image
-              src="static/images/heroimage.jpeg"
-              alt="Hero Image"
-              animation="heroImage 1s ease-in-out forwards 0.5s"
-              filter="brightness(90%)"
-              pos="relative"
-              draggable="false"
-            />
             <HeroSection />
 
             <BouveretSection />

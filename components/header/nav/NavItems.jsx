@@ -5,7 +5,7 @@ const NavItems = () => {
     <>
       <NavItem name="Chambres" page="chambres" />
       <NavItem name="Emplacement" page="emplacement" />
-      <NavItem name="Contact" page="contact" />
+      <NavItem name="Reservation" page="reservation" />
     </>
   );
 };

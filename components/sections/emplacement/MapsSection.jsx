@@ -34,10 +34,22 @@ const MapsSection = () => {
           borderLeft="none"
           p={8}
           my={4}
+          textAlign={{ base: "center", md: "left" }}
         >
-          <Heading as="h2">Amelia&apos;s Bed and Breakfast</Heading>
+          <Heading
+            as="h2"
+            fontFamily="'Bellota Text', sans-serif"
+            textAlign="center"
+          >
+            Amelia&apos;s Bed and Breakfast
+          </Heading>
           <Flex flexDir="column" gap={4} mt={4}>
-            <Flex gap={2.5} align="center" w="full">
+            <Flex
+              gap={2.5}
+              align="center"
+              w="full"
+              flexDir={{ base: "column", md: "row" }}
+            >
               <Image
                 src="/static/icons/home_icon.svg"
                 alt="Réfrigérateur"
@@ -49,7 +61,12 @@ const MapsSection = () => {
               </Text>
             </Flex>
 
-            <Flex gap={2.5} align="center" w="full">
+            <Flex
+              gap={2.5}
+              align="center"
+              w="full"
+              flexDir={{ base: "column", md: "row" }}
+            >
               <Image
                 src="/static/icons/train_icon.svg"
                 alt="Connexion Wi-Fi gratuite"
@@ -61,7 +78,12 @@ const MapsSection = () => {
               </Text>
             </Flex>
 
-            <Flex gap={2.5} align="center" w="full">
+            <Flex
+              gap={2.5}
+              align="center"
+              w="full"
+              flexDir={{ base: "column", md: "row" }}
+            >
               <Image
                 src="/static/icons/car_icon.svg"
                 alt="Salle de bains privée"
@@ -73,7 +95,12 @@ const MapsSection = () => {
               </Text>
             </Flex>
 
-            <Flex gap={2.5} align="center" w="full">
+            <Flex
+              gap={2.5}
+              align="center"
+              w="full"
+              flexDir={{ base: "column", md: "row" }}
+            >
               <Image
                 src="/static/icons/parking_icon.svg"
                 alt="Machine à café"
