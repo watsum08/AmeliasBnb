@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const LinkBtn = (props) => {
   return (
-    <ChakraLink as={Link} href={props.href} scroll={false}>
+    <ChakraLink as={Link} href={props.href}>
       <Text
         w="fit-content"
         m={props.m ?? "auto"}
