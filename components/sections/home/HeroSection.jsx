@@ -10,7 +10,7 @@ const HeroSection = () => {
         fontSize={32}
         color="#fff"
         zIndex={100}
-        h={{ base: "600px", md: "800px" }}
+        h={{ base: "600px", lg: "100vh" }}
       >
         <Image
           src="static/images/heroimage.jpeg"
@@ -20,6 +20,7 @@ const HeroSection = () => {
           pos="relative"
           draggable="false"
           objectFit="cover"
+          w="full"
           h="100%"
           zIndex={-999}
         />
@@ -30,7 +31,7 @@ const HeroSection = () => {
           animation="fullOpacity 1.5s ease-in forwards 0.5s "
           opacity={0}
           fontFamily="'Bellota Text', sans-serif"
-          mt={{ base: "-420px", md: "-550px" }}
+          mt={{ base: "-420px", lg: "-600px" }}
         >
           <Box
             color="#EFE8DE"

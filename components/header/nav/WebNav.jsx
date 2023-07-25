@@ -11,7 +11,7 @@ const WebNav = () => {
       gap={{ sm: 4, md: 6, lg: 12 }}
       my="auto"
       fontFamily="Bellota Text, sans-serif"
-      fontSize="1.5rem"
+      fontSize={{ base: "20px", lg: "24px" }}
       color="#FFDAA4"
       transition="all 0.5s"
     >
